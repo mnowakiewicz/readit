@@ -1,0 +1,11 @@
+<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div ng-repeat="disc in listCtrl.discoveries">
+    <div  class="container" >
+        <div class="jumbotron">
+            <h1 ng-bind="disc.name  "></h1>
+            <p class="lead" ng-bind="disc.shortDescription"></p>
+            <a class="btn btn-lg btn-primary" href="#!details/{{disc.discoveryId}}" role="button">Read &raquo;</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<div class="container"  >
+    <div class="">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3 class="panel-title"><strong>Register</strong></h3></div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="usernameInput">Username</label>
+                        <input type="text" class="form-control" style="border-radius:0px" id="usernameInput" placeholder="Enter Username" ng-model="regCtrl.user.username">
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordInput">Password <a href="/sessions/forgot_password"></a></label>
+                        <input type="password" class="form-control" style="border-radius:0px" id="passwordInput" placeholder="Enter Password" ng-model="regCtrl.user.password">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input type="email" class="form-control" style="border-radius:0px" id="emailInput" placeholder="Enter Email" ng-model="regCtrl.user.email">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstNameInput">First Name</label>
+                        <input type="text" class="form-control" style="border-radius:0px" id="firstNameInput" placeholder="Enter First Name" ng-model="regCtrl.user.firstName">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastNameInput">Last Name</label>
+                        <input type="text" class="form-control" style="border-radius:0px" id="lastNameInput" placeholder="Enter Last Name" ng-model="regCtrl.user.lastName">
+                    </div>
+                    <button  class="btn btn-outline-success btn-lg btn-block" type="submit" ng-click="regCtrl.saveUser()">Sign up</button>
+                    <div style="padding-top: 15px">
+                        <div class="alert alert-danger" role="alert" ng-show="regCtrl.validationError">
+                            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

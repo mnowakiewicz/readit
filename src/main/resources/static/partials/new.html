@@ -1,0 +1,30 @@
+<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<div  ng-show="authenticated">
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3 class="panel-title"><strong>New Discovery</strong></h3></div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="nameInput">Name</label>
+                        <input type="text" class="form-control" style="border-radius:0px" id="nameInput" placeholder="Enter Discovery Name" ng-model="newCtrl.discovery.name">
+                    </div>
+                    <div class="form-group">
+                        <label for="urlInput">URL</label>
+                        <input type="url" class="form-control" style="border-radius:0px" id="urlInput" placeholder="https://readit.com" ng-model="newCtrl.discovery.url">
+                    </div>
+                    <div class="form-group">
+                        <label for="descriptionInput">Content</label>
+                        <textarea class="form-control" style="border-radius:0px" rows="15" id="descriptionInput" placeholder="Text Area" ng-model="newCtrl.discovery.description"></textarea>
+                    </div>
+                    <button  class="btn btn-outline-success btn-lg btn-block" type="submit" ng-click="newCtrl.saveDiscovery()">Add Discovery</button>
+                    <div style="padding-top: 15px">
+                        <div class="alert alert-danger" role="alert" ng-show="newCtrl.validationError">
+                            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
